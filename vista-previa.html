@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Vista previa de las tres opciones para adherirse o informarse sobre la queja ante el Defensor del Pueblo.">
+  <title>Vista previa · Queja ante el Defensor del Pueblo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172132;
+      --muted: #566174;
+      --background: #f5f7fa;
+      --surface: #ffffff;
+      --border: #e1e6ed;
+      --accent: #182438;
+      --accent-hover: #344761;
+      --focus: #2673cc;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse 66% 45% at 50% 0%, #e6edf6 0%, transparent 90%),
+        var(--background);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip {
+      position: absolute;
+      left: 16px;
+      top: -80px;
+      background: #fff;
+      padding: 10px 14px;
+      z-index: 10;
+    }
+    .skip:focus { top: 12px; }
+    .preview {
+      background: #fff8e9;
+      border-bottom: 1px solid #f0dfb6;
+      padding: 10px 20px;
+      text-align: center;
+      color: #69532a;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.015em;
+    }
+    .page { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+    .hero { text-align: center; padding: clamp(42px, 7vw, 94px) 0 clamp(30px, 5vw, 54px); }
+    .hero h1 {
+      max-width: 970px;
+      margin: 0 auto;
+      font-size: clamp(2rem, 4.1vw, 3.2rem);
+      line-height: 1.19;
+      font-weight: 760;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+    .record {
+      margin: 19px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 500;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 22px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: 410px;
+      padding: 29px 26px 26px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgb(17 32 52 / 4%);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #cbd6e4;
+      box-shadow: 0 18px 42px rgb(17 32 52 / 10%);
+    }
+    .symbol {
+      display: inline-flex;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 24px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e7ecf3;
+      border-radius: 16px;
+      color: #34445d;
+      background: #f5f7fb;
+    }
+    .symbol svg { width: 26px; height: 26px; }
+    .card h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+      line-height: 1.39;
+      font-weight: 720;
+      letter-spacing: -0.023em;
+      text-wrap: pretty;
+    }
+    .card p {
+      margin: 0 0 29px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.69;
+      text-wrap: pretty;
+    }
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      margin-top: auto;
+      padding: 13px 13px;
+      border-radius: 11px;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.92rem;
+      line-height: 1.3;
+      font-weight: 650;
+      transition: background 150ms ease, transform 150ms ease;
+    }
+    .action:hover { background: var(--accent-hover); }
+    .action:active { transform: scale(0.99); }
+    .action:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .action svg { width: 17px; height: 17px; flex: none; }
+    .foot {
+      margin: 42px auto 30px;
+      text-align: center;
+      color: #727e8e;
+      font-size: 0.82rem;
+    }
+    @media (max-width: 930px) {
+      .page { width: min(650px, calc(100% - 36px)); }
+      .hero { padding: 42px 0 32px; }
+      .cards { grid-template-columns: 1fr; gap: 17px; }
+      .card { min-height: 0; padding: 26px; }
+      .symbol { margin-bottom: 17px; }
+      .card p { margin-bottom: 28px; }
+    }
+    @media (max-width: 420px) {
+      .page { width: calc(100% - 28px); }
+      .hero h1 { font-size: 1.9rem; }
+      .card { padding: 23px 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#opciones">Saltar a las opciones</a>
+  <div class="preview">VISTA PREVIA · Los tres enlaces llevan al entorno de pruebas</div>
+  <main class="page" id="opciones">
+    <header class="hero">
+      <h1>Queja ante el Defensor del Pueblo por los derechos de las personas adoptadas y los «bebés robados»</h1>
+      <p class="record">Expediente n.º 26037767</p>
+    </header>
+
+    <section class="cards" aria-label="Elige cómo continuar">
+      <article class="card">
+        <span class="symbol" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v5"/>
+            <path d="M8 9h6M8 13h3"/>
+            <path d="m16 18 4.5-4.5a1.4 1.4 0 0 0-2-2L14 16l-.7 2.7z"/>
+          </svg>
+        </span>
+        <h2>Ya conozco el problema y quiero adherirme de la forma más sencilla.</h2>
+        <p>Solo tengo que rellenar mis datos y escribir mi adhesión. El sistema prepara los documentos y los envía por correo electrónico al Defensor del Pueblo. Recibiré una copia.</p>
+        <a class="action" href="https://enpruebas.gomezaldaz.com/es/queja-adoptados-bebes-robados/adhesiones-por-correo/">
+          Rellenar el formulario
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="symbol" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </span>
+        <h2>Ya conozco el problema y prefiero presentar mi adhesión directamente en la web del Defensor del Pueblo.</h2>
+        <p>Tendré que preparar mi texto de adhesión, descargar la queja, rellenar el formulario del Defensor del Pueblo y adjuntar los documentos. Después podré consultar su tramitación desde mi espacio personal, utilizando las opciones de identificación disponibles.</p>
+        <a class="action" href="https://enpruebas.gomezaldaz.com/es/queja-adoptados-bebes-robados/#instrucciones-presentacion-directa">
+          Ver las instrucciones
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="symbol" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3a2 2 0 0 1 2 2v13h-5a4 4 0 0 0-4 3 4 4 0 0 0-4-3H3z"/>
+          </svg>
+        </span>
+        <h2>No conozco bien el problema y quiero informarme antes de decidir.</h2>
+        <p>Quiero entender qué se denuncia, qué cambios se solicitan y por qué es importante esta queja.</p>
+        <a class="action" href="https://enpruebas.gomezaldaz.com/es/queja-adoptados-bebes-robados/#que-plantea">
+          Entender el problema
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </article>
+    </section>
+    <footer class="foot">Iniciativa independiente. Esta no es una página oficial del Defensor del Pueblo.</footer>
+  </main>
+</body>
+</html>
