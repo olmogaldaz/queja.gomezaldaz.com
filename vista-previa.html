@@ -70,11 +70,16 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       align-items: stretch;
-      gap: 22px;
+      column-gap: 22px;
+      row-gap: 0;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
     }
     .card {
-      display: flex;
-      flex-direction: column;
+      position: relative;
+      display: grid;
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+      row-gap: 0;
       min-width: 0;
       min-height: 410px;
       padding: 29px 26px 26px;
@@ -83,6 +88,19 @@
       background: var(--surface);
       box-shadow: 0 8px 24px rgb(17 32 52 / 4%);
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .card:nth-child(1) { --card-tone: #087f72; --card-soft: #e8f7f2; --card-line: #bde6dc; }
+    .card:nth-child(2) { --card-tone: #3d65ac; --card-soft: #edf2fd; --card-line: #d3dff6; }
+    .card:nth-child(3) { --card-tone: #a26925; --card-soft: #fff5e5; --card-line: #f0dfc2; }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 26px;
+      right: 26px;
+      height: 4px;
+      background: var(--card-tone);
+      border-radius: 0 0 7px 7px;
     }
     .card:hover {
       transform: translateY(-4px);
@@ -96,10 +114,10 @@
       margin-bottom: 24px;
       align-items: center;
       justify-content: center;
-      border: 1px solid #e7ecf3;
+      border: 1px solid var(--card-line);
       border-radius: 16px;
-      color: #34445d;
-      background: #f5f7fb;
+      color: var(--card-tone);
+      background: var(--card-soft);
     }
     .symbol svg { width: 26px; height: 26px; }
     .card h2 {
@@ -148,8 +166,8 @@
     @media (max-width: 930px) {
       .page { width: min(650px, calc(100% - 36px)); }
       .hero { padding: 42px 0 32px; }
-      .cards { grid-template-columns: 1fr; gap: 17px; }
-      .card { min-height: 0; padding: 26px; }
+      .cards { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 17px; }
+      .card { display: flex; flex-direction: column; grid-row: auto; min-height: 0; padding: 26px; }
       .symbol { margin-bottom: 17px; }
       .card p { margin-bottom: 28px; }
     }
