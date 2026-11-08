@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Conoce la queja presentada por Olmo Gómez Aldaz ante el Defensor del Pueblo y elige cómo adherirte al expediente 26037767.">
+  <title>Queja sobre la discriminación de las personas adoptadas y los «bebés robados» respecto de su filiación e identidad de origen · Olmo Gómez Aldaz</title>
+  <link rel="canonical" href="https://queja.gomezaldaz.com/">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172132;
+      --muted: #566174;
+      --background: #f5f7fa;
+      --surface: #ffffff;
+      --border: #e1e6ed;
+      --accent: #182438;
+      --accent-hover: #344761;
+      --focus: #2673cc;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse 66% 45% at 50% 0%, #e6edf6 0%, transparent 90%),
+        var(--background);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip {
+      position: absolute;
+      left: 16px;
+      top: -80px;
+      background: #fff;
+      padding: 10px 14px;
+      z-index: 10;
+    }
+    .skip:focus { top: 12px; }
+    .page { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+    .hero { text-align: center; padding: clamp(42px, 7vw, 94px) 0 clamp(30px, 5vw, 54px); }
+    .hero h1 {
+      max-width: 970px;
+      margin: 0 auto;
+      font-size: clamp(2rem, 4.1vw, 3.2rem);
+      line-height: 1.19;
+      font-weight: 760;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+    .record {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.22rem, 2vw, 1.4rem);
+      line-height: 1.45;
+      font-weight: 500;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      column-gap: 22px;
+      row-gap: 0;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+    }
+    .card {
+      position: relative;
+      display: grid;
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+      row-gap: 0;
+      min-width: 0;
+      min-height: 410px;
+      padding: 29px 26px 26px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgb(17 32 52 / 4%);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .card:nth-child(1) { --card-tone: #087f72; --card-soft: #e8f7f2; --card-line: #bde6dc; }
+    .card:nth-child(2) { --card-tone: #3d65ac; --card-soft: #edf2fd; --card-line: #d3dff6; }
+    .card:nth-child(3) { --card-tone: #a26925; --card-soft: #fff5e5; --card-line: #f0dfc2; }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 26px;
+      right: 26px;
+      height: 4px;
+      background: var(--card-tone);
+      border-radius: 0 0 7px 7px;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #cbd6e4;
+      box-shadow: 0 18px 42px rgb(17 32 52 / 10%);
+    }
+    .symbol {
+      display: inline-flex;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 24px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--card-line);
+      border-radius: 16px;
+      color: var(--card-tone);
+      background: var(--card-soft);
+    }
+    .symbol svg { width: 26px; height: 26px; }
+    .card h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+      line-height: 1.39;
+      font-weight: 720;
+      letter-spacing: -0.023em;
+      text-wrap: pretty;
+    }
+    .card p {
+      margin: 0 0 29px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.69;
+      text-wrap: pretty;
+    }
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      margin-top: auto;
+      padding: 13px 13px;
+      border-radius: 11px;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.92rem;
+      line-height: 1.3;
+      font-weight: 650;
+      transition: background 150ms ease, transform 150ms ease;
+    }
+    .action:hover { background: var(--accent-hover); }
+    .action:active { transform: scale(0.99); }
+    .action:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .action svg { width: 17px; height: 17px; flex: none; }
+    .independence-note {
+      margin: 32px 0 0;
+      text-align: center;
+      color: #768395;
+      font-size: 0.82rem;
+    }
+    .site-footer {
+      margin: 35px auto 28px;
+      padding: 17px 0 0;
+      border-top: 1px solid #dce3ed;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .footer-copy { margin: 0; line-height: 1.65; }
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: center;
+      gap: 15px;
+      margin-top: 11px;
+    }
+    .footer-links a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.86rem;
+    }
+    .footer-links a:nth-child(1) { text-align: left; }
+    .footer-links a:nth-child(2) { text-align: center; }
+    .footer-links a:nth-child(3) { text-align: right; }
+    .main-site-link {
+      margin: 19px 0 0;
+      text-align: center;
+    }
+    .main-site-link a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .footer-links a:hover { text-decoration: underline; }
+    .footer-links a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+    @media (max-width: 930px) {
+      .page { width: min(650px, calc(100% - 36px)); }
+      .hero { padding: 42px 0 32px; }
+      .cards { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 17px; }
+      .card { display: flex; flex-direction: column; grid-row: auto; min-height: 0; padding: 26px; }
+      .symbol { margin-bottom: 17px; }
+      .card p { margin-bottom: 28px; }
+      .footer-links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 16px; }
+      .footer-links a:nth-child(1) { text-align: left; }
+      .footer-links a:nth-child(2) { text-align: center; }
+      .footer-links a:nth-child(3) { text-align: right; }
+    }
+    @media (max-width: 420px) {
+      .page { width: calc(100% - 28px); }
+      .hero h1 { font-size: 1.9rem; }
+      .card { padding: 23px 21px; }
+      .footer-links { grid-template-columns: 1fr; justify-items: center; }
+      .footer-links a:nth-child(n) { text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#opciones">Saltar a las opciones</a>
+  <main class="page" id="opciones">
+    <header class="hero">
+      <h1>Queja sobre la discriminación de las personas adoptadas y los «bebés robados» respecto de su filiación e identidad de origen</h1>
+      <p class="record">Presentada por <strong>Olmo Gómez Aldaz</strong> · Expediente n.º 26037767</p>
+    </header>
+
+    <section class="cards" aria-label="Elige cómo continuar">
+      <article class="card">
+        <span class="symbol" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v5"/>
+            <path d="M8 9h6M8 13h3"/>
+            <path d="m16 18 4.5-4.5a1.4 1.4 0 0 0-2-2L14 16l-.7 2.7z"/>
+          </svg>
+        </span>
+        <h2>Ya conozco el problema y quiero adherirme de la forma más sencilla.</h2>
+        <p>Solo tengo que rellenar un formulario con mis datos y escribir mi adhesión. El sistema preparará mis documentos y los enviará por correo electrónico al Defensor del Pueblo. Recibiré una copia del envío.</p>
+        <a class="action" href="https://gomezaldaz.com/es/queja-adoptados-bebes-robados/adhesiones-por-correo/">
+          Rellenar el formulario
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="symbol" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </span>
+        <h2>Ya conozco el problema y prefiero presentar mi adhesión directamente en la web del Defensor del Pueblo.</h2>
+        <p>Tendré que preparar mi texto de adhesión, descargar la queja, rellenar el formulario del Defensor del Pueblo y adjuntar los documentos. Después podré consultar su tramitación desde mi espacio personal, utilizando las opciones de identificación disponibles.</p>
+        <a class="action" href="https://gomezaldaz.com/es/queja-adoptados-bebes-robados/#instrucciones-presentacion-directa">
+          Ver las instrucciones
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="symbol" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3a2 2 0 0 1 2 2v13h-5a4 4 0 0 0-4 3 4 4 0 0 0-4-3H3z"/>
+          </svg>
+        </span>
+        <h2>No conozco bien el problema y quiero informarme antes de decidir.</h2>
+        <p>La adopción puede hacer que una persona pierda derechos respecto de sus padres. Además, aunque sea adulta, la ley no le permite poner fin a su adopción solo porque así lo decida. Esta queja pide cambiar esa situación, especialmente grave para quienes fueron «bebés robados».</p>
+        <a class="action" href="https://gomezaldaz.com/es/queja-adoptados-bebes-robados/#que-plantea">
+          Entender el problema
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </article>
+    </section>
+    <p class="independence-note">Iniciativa independiente. Esta no es una página oficial del Defensor del Pueblo.</p>
+  </main>
+  <footer class="site-footer page">
+    <p class="footer-copy">© 2026 · Olmo Gómez Aldaz · Web personal y documental contra la cultura del silencio sobre las víctimas del tráfico de menores</p>
+    <nav class="footer-links" aria-label="Enlaces de utilidad">
+      <a href="https://gomezaldaz.com/es/obra/libros/">Libros</a>
+      <a href="https://gomezaldaz.com/es/prensa/notas-de-prensa/">Notas de prensa</a>
+      <a href="https://gomezaldaz.com/es/contacto/">Contacto</a>
+    </nav>
+    <p class="main-site-link"><a href="https://gomezaldaz.com/">Web principal · gomezaldaz.com</a></p>
+  </footer>
+</body>
+</html>
