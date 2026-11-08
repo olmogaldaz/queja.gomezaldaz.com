@@ -19,9 +19,19 @@ Este repositorio no sustituye a la web principal ni contiene el servicio de env�
 - Directorio de publicación: raíz del repositorio.
 - Archivo `CNAME`: `queja.gomezaldaz.com`.
 - Archivo `index.html`: portada pública, con enlaces a los servicios existentes de la web principal.
-- Título: «Queja sobre la discriminación de las personas adoptadas y los «bebés robados» respecto de su filiación e identidad de origen».
+- Título: «Queja sobre la discriminación de las personas adoptadas y los «bebés robados»».
 
 **Estado actual (8 de noviembre de 2026):** publicada la portada definitiva mediante `index.html`, con tres accesos a las páginas de producción de `gomezaldaz.com`.
+
+## Datos estructurados (Schema.org)
+
+La portada incluye JSON-LD con tres entidades enlazadas por identificadores estables:
+
+- `Person`: Olmo Gómez Aldaz, con el mismo `@id` utilizado por `gomezaldaz.com` (`https://gomezaldaz.com/#person`).
+- `WebSite`: el sitio independiente `https://queja.gomezaldaz.com/`.
+- `WebPage`: la portada y sus metadatos, incluida su fecha de publicación.
+
+Los datos estructurados se actualizan dentro de `index.html` si cambian el título, la descripción o la fecha de modificación. El sitemap, los enlaces desde la web principal y Search Console quedan pendientes de tratar por separado.
 
 ## Separación de responsabilidades
 
