@@ -157,8 +157,14 @@
     .action:active { transform: scale(0.99); }
     .action:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
     .action svg { width: 17px; height: 17px; flex: none; }
+    .independence-note {
+      margin: 32px 0 0;
+      text-align: center;
+      color: #768395;
+      font-size: 0.82rem;
+    }
     .site-footer {
-      margin: 48px auto 28px;
+      margin: 35px auto 28px;
       padding: 17px 0 0;
       border-top: 1px solid #dce3ed;
       color: var(--muted);
@@ -167,7 +173,7 @@
     .footer-copy { margin: 0; line-height: 1.65; }
     .footer-links {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       align-items: center;
       gap: 15px;
       margin-top: 11px;
@@ -178,11 +184,19 @@
       font-size: 0.86rem;
     }
     .footer-links a:nth-child(1) { text-align: left; }
-    .footer-links a:nth-child(2), .footer-links a:nth-child(3) { text-align: center; }
-    .footer-links a:nth-child(4) { text-align: right; font-weight: 700; }
+    .footer-links a:nth-child(2) { text-align: center; }
+    .footer-links a:nth-child(3) { text-align: right; }
+    .main-site-link {
+      margin: 19px 0 0;
+      text-align: center;
+    }
+    .main-site-link a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+    }
     .footer-links a:hover { text-decoration: underline; }
     .footer-links a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
-    .footer-clarification { margin: 15px 0 0; color: #768395; font-size: 0.78rem; }
     @media (max-width: 930px) {
       .page { width: min(650px, calc(100% - 36px)); }
       .hero { padding: 42px 0 32px; }
@@ -190,13 +204,17 @@
       .card { display: flex; flex-direction: column; grid-row: auto; min-height: 0; padding: 26px; }
       .symbol { margin-bottom: 17px; }
       .card p { margin-bottom: 28px; }
-      .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
-      .footer-links a:nth-child(n) { text-align: left; }
+      .footer-links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 16px; }
+      .footer-links a:nth-child(1) { text-align: left; }
+      .footer-links a:nth-child(2) { text-align: center; }
+      .footer-links a:nth-child(3) { text-align: right; }
     }
     @media (max-width: 420px) {
       .page { width: calc(100% - 28px); }
       .hero h1 { font-size: 1.9rem; }
       .card { padding: 23px 21px; }
+      .footer-links { grid-template-columns: 1fr; justify-items: center; }
+      .footer-links a:nth-child(n) { text-align: center; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
@@ -258,6 +276,7 @@
         </a>
       </article>
     </section>
+    <p class="independence-note">Iniciativa independiente. Esta no es una página oficial del Defensor del Pueblo.</p>
   </main>
   <footer class="site-footer page">
     <p class="footer-copy">© 2026 · Olmo Gómez Aldaz · Web personal y documental contra la cultura del silencio sobre las víctimas del tráfico de menores</p>
@@ -265,9 +284,8 @@
       <a href="https://gomezaldaz.com/es/obra/libros/">Libros</a>
       <a href="https://gomezaldaz.com/es/prensa/notas-de-prensa/">Notas de prensa</a>
       <a href="https://gomezaldaz.com/es/contacto/">Contacto</a>
-      <a href="https://gomezaldaz.com/">Web principal · gomezaldaz.com</a>
     </nav>
-    <p class="footer-clarification">Iniciativa independiente. Esta no es una web oficial del Defensor del Pueblo.</p>
+    <p class="main-site-link"><a href="https://gomezaldaz.com/">Web principal · gomezaldaz.com</a></p>
   </footer>
 </body>
 </html>
