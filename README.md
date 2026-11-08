@@ -33,6 +33,10 @@ La portada incluye JSON-LD con tres entidades enlazadas por identificadores esta
 
 Los datos estructurados se actualizan dentro de `index.html` si cambian el título, la descripción o la fecha de modificación. El sitemap, los enlaces desde la web principal y Search Console quedan pendientes de tratar por separado.
 
+## Imagen para compartir
+
+La vista previa del enlace utiliza el archivo público `/img/queja-compartir-2026.jpg` (1200 × 630 píxeles): `og:image` y `twitter:image`, con tarjeta grande y texto alternativo. La misma imagen se identifica como `WebPage.primaryImageOfPage`. La fotografía personal de Olmo sigue figurando exclusivamente en el nodo `Person.image`.
+
 ## Separación de responsabilidades
 
 Los formularios actuales de adhesión se encuentran en `gomezaldaz.com` y en su entorno de pruebas. Su servicio de envío está desarrollado en el repositorio `olmogaldaz/adhesiones_mail` y desplegado en Vercel como `adhesionesmail`.
